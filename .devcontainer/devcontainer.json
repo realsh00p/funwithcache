@@ -1,0 +1,16 @@
+{
+  "name": "funwithprofiler",
+  "image": "funwithprofiler:0.0.1",
+  "runArgs": [
+    "--init",
+    "--cap-add=SYS_PTRACE",
+    "--cap-add=SYS_NICE",
+    "--cap-add=CAP_NET_ADMIN",
+    "--security-opt",
+    "seccomp=unconfined"
+  ],
+  "extensions": [
+    "llvm-vs-code-extensions.vscode-clangd",
+    "ms-vscode.cmake-tools"
+  ]
+}

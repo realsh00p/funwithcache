@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "cache_miss",
+      "type": "extensionHost",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceFolder}/build/bin/cache_miss",
+      "cwd": "${workspaceFolder}/build/bin/",
+    },
+    {
+      "name": "memory_leak",
+      "type": "extensionHost",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceFolder}/build/bin/memory_leak",
+      "cwd": "${workspaceFolder}/build/bin/",
+    }
+  ]
+}
