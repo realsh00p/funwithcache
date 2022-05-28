@@ -5,7 +5,7 @@
 namespace funwithprofiler {
 namespace warmup {
 
-auto SieveOfSundaramSum(std::uint64_t n) -> std::uint64_t;
+auto sieve_of_sundaram(std::uint64_t n) -> std::uint64_t;
 
 } // namespace warmup
 } // namespace funwithprofiler

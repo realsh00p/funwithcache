@@ -1,5 +1,6 @@
 #include "Warmup.hpp"
 
+#include <fstream>
 #include <memory>
 #include <vector>
 
@@ -7,9 +8,9 @@ namespace funwithprofiler {
 namespace warmup {
 
 // this is not made to be fast
-// it's made to be dump on purpose
+// it's made to be dumb on purpose
 // vector<shared<bool>> - yes this is dumb
-auto SieveOfSundaramSum(std::uint64_t n) -> std::uint64_t {
+auto sieve_of_sundaram(std::uint64_t n) -> std::uint64_t {
   std::uint64_t sum = n > 2 ? 2 : 0;
   std::uint64_t nNew = (n - 1) / 2;
 

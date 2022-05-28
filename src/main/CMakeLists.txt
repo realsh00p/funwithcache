@@ -1,8 +1,8 @@
-set(target cache_miss)
+set(target funwithprofiler)
 
 file(GLOB_RECURSE srcs ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
 
-add_library(
+add_executable(
     ${target}
 )
 
@@ -11,12 +11,9 @@ target_sources(
     PRIVATE ${srcs}
 )
 
-target_include_directories(
-    ${target}
-    PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
-)
-
 target_link_libraries(
     ${target}
-    PUBLIC common
+    PRIVATE cache_miss
+            locality
+            Boost::program_options
 )

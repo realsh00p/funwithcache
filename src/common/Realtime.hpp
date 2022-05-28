@@ -2,6 +2,7 @@
 #include <sched.h>
 
 namespace funwithprofiler {
+namespace realtime {
 
 template <int Scheduler>
 class Realtime {
@@ -25,4 +26,5 @@ public:
   }
 };
 
+} // namespace realtime
 } // namespace funwithprofiler

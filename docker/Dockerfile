@@ -9,6 +9,8 @@ RUN apt-get update && apt-get \
         gdb \
         valgrind \
         libboost-program-options-dev \
+        libprotobuf-dev \
+        protobuf-compiler \
         wget && \
     rm -rf /var/lib/apt/lists*
 

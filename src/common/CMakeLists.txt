@@ -14,6 +14,10 @@ if (srcs)
     ${target} 
     PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
   )
+  target_link_libraries(
+    ${target}
+    PUBLIC proto
+  )
 else()
   add_library(
     ${target}
@@ -22,6 +26,10 @@ else()
   target_include_directories(
     ${target}
     INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}
+  )
+  target_link_libraries(
+    ${target}
+    INTERFACE proto
   )
 endif()
 

@@ -2,7 +2,7 @@ set(target locality)
 
 file(GLOB_RECURSE srcs ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
 
-add_executable(
+add_library(
     ${target}
 )
 
@@ -11,8 +11,12 @@ target_sources(
     PRIVATE ${srcs}
 )
 
+target_include_directories(
+    ${target}
+    PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
+)
+
 target_link_libraries(
     ${target}
-    PRIVATE common
-            Boost::program_options
+    PUBLIC common
 )

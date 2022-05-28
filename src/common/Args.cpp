@@ -42,11 +42,11 @@ std::istream &operator>>(std::istream &in, Storage &value) {
 std::ostream &operator<<(std::ostream &os, const Storage &value) {
   switch (value) {
   case Storage::STACK:
-    return os << " stack";
+    return os << "stack";
   case Storage::STATIC:
     return os << "static";
   case Storage::HEAP:
-    return os << "  heap";
+    return os << "heap";
   default:
     throw;
   }
@@ -69,7 +69,7 @@ std::ostream &operator<<(std::ostream &os, const Traversal &value) {
   case Traversal::BREADTH_FIRST:
     return os << "breadth-first";
   case Traversal::DEPTH_FIRST:
-    return os << "depth-first  ";
+    return os << "depth-first";
   default:
     throw;
   }

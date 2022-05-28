@@ -1,0 +1,43 @@
+syntax = "proto2";
+
+package funwithprofiler;
+
+enum Storage { 
+  STACK = 1;
+  STATIC = 2;
+  HEAP = 3;
+};
+
+enum Traversal {
+  BREADTH_FIRST = 1;
+  DEPTH_FIRST = 2;
+}
+
+message Result {
+  required int32 sum = 1;
+  required int32 elapsed_us = 2;
+  required int32 elapsed_cycles = 3;
+}
+
+
+message CacheMiss {
+  required Storage storage = 1;
+  required Traversal traversal = 2;
+  required Result result = 3;
+}
+
+message Locality {
+  required Storage storage = 1;
+  required Result result = 2;
+}
+
+message Test {
+  oneof type {
+    CacheMiss cache_miss = 1;
+    Locality locality = 2;
+  }
+}
+
+message Tests {
+  repeated Test test = 1;
+}
