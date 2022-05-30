@@ -1,3 +1,6 @@
 build*
 .cache/
 *.out.*
+.venv/
+*.proto
+__pycache__
