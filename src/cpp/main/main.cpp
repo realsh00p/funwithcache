@@ -4,6 +4,7 @@
 #include "Realtime.hpp"
 #include "Warmup.hpp"
 
+#include <fstream>
 #include <iostream>
 #include <numeric>
 
@@ -129,5 +130,6 @@ int main(int argc, char *argv[]) {
 
   std::string output;
   google::protobuf::TextFormat::PrintToString(tests, &output);
-  std::cerr << output;
+  std::ofstream ofs{"output.proto"};
+  ofs << output;
 }

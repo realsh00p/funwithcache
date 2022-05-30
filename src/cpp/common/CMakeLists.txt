@@ -16,7 +16,7 @@ if (srcs)
   )
   target_link_libraries(
     ${target}
-    PUBLIC proto
+    PUBLIC proto_cpp
   )
 else()
   add_library(
@@ -29,7 +29,7 @@ else()
   )
   target_link_libraries(
     ${target}
-    INTERFACE proto
+    INTERFACE proto_cpp
   )
 endif()
 

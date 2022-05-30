@@ -13,7 +13,7 @@
 namespace funwithprofiler {
 namespace locality {
 
-using Matrix = matrix::Matrix<primitive::u64, 100, 100>;
+using Matrix = matrix::Matrix<primitive::u64, 100, 1000>;
 
 static auto run_static() -> Result {
   static std::array<Matrix, 100> matrices{};

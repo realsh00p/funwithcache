@@ -14,7 +14,7 @@
 namespace funwithprofiler {
 namespace cache_miss {
 
-using Matrix = matrix::Matrix<primitive::u64, 100, 100>;
+using Matrix = matrix::Matrix<primitive::u64, 1000, 1000>;
 
 static auto run_cache_miss(Matrix *p, const Traversal &traversal) -> Result {
   Result ret;

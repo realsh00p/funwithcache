@@ -7,11 +7,18 @@
     "--cap-add=SYS_NICE",
     "--cap-add=CAP_NET_ADMIN",
     "--security-opt",
-    "seccomp=unconfined"
+    "seccomp=unconfined",
   ],
   "extensions": [
     "llvm-vs-code-extensions.vscode-clangd",
     "ms-vscode.cmake-tools",
-    "ms-vscode.cpptools"
+    "ms-vscode.cpptools",
+    "ms-python.python"
+  ],
+  "remoteEnv": {
+    "DISPLAY": "${localEnv:DISPLAY}"
+  },
+  "mounts": [
+    "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind,consistency=cached"
   ]
 }
