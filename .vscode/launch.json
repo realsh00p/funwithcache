@@ -2,18 +2,17 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "cache_miss",
-      "type": "extensionHost",
+      "name": "debug - funwithprofiler",
+      "type": "cppdbg",
       "request": "launch",
-      "runtimeExecutable": "${workspaceFolder}/build/bin/cache_miss",
-      "cwd": "${workspaceFolder}/build/bin/",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/build/bin/funwithprofiler",
+      "args": [
+        "--sundaram",
+        "100",
+        "--iterations",
+        "2000"
+      ],
     },
-    {
-      "name": "memory_leak",
-      "type": "extensionHost",
-      "request": "launch",
-      "runtimeExecutable": "${workspaceFolder}/build/bin/memory_leak",
-      "cwd": "${workspaceFolder}/build/bin/",
-    }
   ]
 }
