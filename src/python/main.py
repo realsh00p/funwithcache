@@ -20,11 +20,11 @@ def main():
     for m in message.test:
         if m.HasField("cache_miss"):
             k = f"cache_miss-{Storage.Name(m.cache_miss.storage)}-{Traversal.Name(m.cache_miss.traversal)}"
-            v = m.cache_miss.result.elapsed_cycles
+            v = m.cache_miss.result.elapsed_us
             cache_miss[k].append(v)
         if m.HasField("locality"):
             k = f"locality-{Storage.Name(m.locality.storage)}"
-            v = m.locality.result.elapsed_cycles
+            v = m.locality.result.elapsed_us
             locality[k].append(v)
 
     pyplot.style.use('_mpl-gallery')
