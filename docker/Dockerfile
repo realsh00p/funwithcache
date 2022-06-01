@@ -28,6 +28,7 @@ RUN wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add - >/dev/n
         libtool \
         python3 \
         python3-pip \
+        python3-tk \
         python3-venv \
         valgrind && \
     rm -rf /var/lib/apt/lists*

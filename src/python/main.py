@@ -6,7 +6,7 @@ from output_pb2 import Tests, Storage, Traversal
 from typing import List
 
 import matplotlib
-matplotlib.use('Qt5Agg')
+matplotlib.use('TkAgg')
 
 
 def main():
