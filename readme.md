@@ -1,4 +1,9 @@
-Mac OS build instructions:
+### Linux
+
+Project should run seamlessly in docker.
+
+
+### Mac OS build instructions:
 
 Install Docker desktop
 
@@ -27,11 +32,11 @@ wget https://github.com/Kitware/CMake/releases/download/v3.20.2/cmake-3.20.2.tar
 tar -zxvf cmake-3.20.2.tar.gz
 cd cmake-3.20.2
 ./bootstrap
-make 
-sudo make install 
+make
+sudo make install
 
 if boost library is missing in the make process:
 sudo apt-get install libboost-all-dev
 
-if protobug library is missing:
+if protobuf library is missing:
 sudo apt-get install protobuf-compiler
