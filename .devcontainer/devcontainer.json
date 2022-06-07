@@ -1,6 +1,6 @@
 {
   "name": "funwithprofiler",
-  "image": "funwithprofiler:0.0.1",
+  "dockerFile": "../docker/Dockerfile",
   "runArgs": [
     "--init",
     "--cap-add=SYS_PTRACE",
