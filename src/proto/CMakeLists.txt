@@ -6,8 +6,8 @@ find_package(Protobuf REQUIRED COMPONENTS protoc libprotobuf)
 file(GLOB_RECURSE protos ${CMAKE_CURRENT_SOURCE_DIR}/*.proto)
 
 PROTOBUF_GENERATE_CPP(
-  proto_cpp_srcs 
-  proto_cpp_hdrs 
+  proto_cpp_srcs
+  proto_cpp_hdrs
   ${protos}
 )
 
@@ -38,13 +38,13 @@ target_link_libraries(
 set(target_python proto_python)
 
 add_custom_target(
-  ${target_python} 
-  ALL 
+  ${target_python}
+  ALL
   DEPENDS ${proto_python_srcs}
 )
 
 add_custom_command(
-  TARGET ${target_python} 
+  TARGET ${target_python}
   POST_BUILD
   VERBATIM
   COMMAND_EXPAND_LISTS

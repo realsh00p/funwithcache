@@ -2,7 +2,7 @@ syntax = "proto2";
 
 package funwithprofiler;
 
-enum Storage { 
+enum Storage {
   STACK = 1;
   STATIC = 2;
   HEAP = 3;

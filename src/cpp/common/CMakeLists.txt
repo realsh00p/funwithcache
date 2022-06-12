@@ -11,7 +11,7 @@ if (srcs)
       PRIVATE ${srcs}
   )
   target_include_directories(
-    ${target} 
+    ${target}
     PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
   )
   target_link_libraries(
@@ -32,4 +32,3 @@ else()
     INTERFACE proto_cpp
   )
 endif()
-
