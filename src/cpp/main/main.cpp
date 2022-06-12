@@ -39,10 +39,9 @@ public:
     std::random_shuffle(suite.begin(), suite.end());
   }
 
-  auto run(const int sundaram) -> Tests {
-    Tests tests;
+  auto run(const int sundaram, Tests *const tests) {
     for (auto &&s : suite) {
-      auto test{tests.add_test()};
+      auto test{tests->add_test()};
       warmup::sieve_of_sundaram(sundaram);
       switch (s) {
       case CACHE_MISS_HEAP_BREADTH_FIRST:
@@ -122,10 +121,7 @@ int main(int argc, char *argv[]) {
   const auto sundaram(vm["sundaram"].as<int>());
   Tests tests;
   for (auto &&i : iterations) {
-    auto _tests = i.run(sundaram).test();
-    for (auto &&j : _tests) {
-      tests.add_test()->CopyFrom(j);
-    }
+    i.run(sundaram, &tests);
   }
 
   std::string output;
