@@ -1,5 +1,6 @@
 #include "cache_miss.hpp"
 #include "locality_1.hpp"
+#include "locality_2.hpp"
 
 #include "Realtime.hpp"
 #include "Warmup.hpp"
@@ -18,7 +19,7 @@ class Suite {
   enum {
     // clang-format off
     SUITE_UNDEFINED                 = 0,
-    SUITE_LEN                       = 9,
+    SUITE_LEN                       = 11,
 
     CACHE_MISS_HEAP_BREADTH_FIRST   = 1,
     CACHE_MISS_HEAP_DEPTH_FIRST     = 2,
@@ -28,6 +29,8 @@ class Suite {
     CACHE_MISS_STATIC_DEPTH_FIRST   = 6,
     LOCALITY_1_HEAP                 = 7,
     LOCALITY_1_STATIC               = 8,
+    LOCALITY_2_HEAP_RANDOM          = 9,
+    LOCALITY_2_HEAP_CONTIGUOUS      = 10,
     // clang-format on
   };
 
@@ -89,6 +92,16 @@ public:
         test->mutable_locality1()->set_storage(Storage::STATIC);
         test->mutable_locality1()->mutable_result()->CopyFrom(
             locality_1::run(Storage::STATIC));
+        break;
+      case LOCALITY_2_HEAP_RANDOM:
+        test->mutable_locality2()->set_storage(Storage::HEAP_RANDOM);
+        test->mutable_locality2()->mutable_result()->CopyFrom(
+            locality_2::run(Storage::HEAP_RANDOM));
+        break;
+      case LOCALITY_2_HEAP_CONTIGUOUS:
+        test->mutable_locality2()->set_storage(Storage::HEAP_CONTIGUOUS);
+        test->mutable_locality2()->mutable_result()->CopyFrom(
+            locality_2::run(Storage::HEAP_CONTIGUOUS));
         break;
       }
     }

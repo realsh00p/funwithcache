@@ -15,21 +15,27 @@ def main():
         message = text_format.Parse(f.read(), Tests())
 
     cache_miss: defaultdict[List] = defaultdict(list)
-    locality: defaultdict[List] = defaultdict(list)
+    locality1: defaultdict[List] = defaultdict(list)
+    locality2: defaultdict[List] = defaultdict(list)
 
     for m in message.test:
         if m.HasField("cache_miss"):
             k = f"cache_miss-{Storage.Name(m.cache_miss.storage)}-{Traversal.Name(m.cache_miss.traversal)}"
             v = m.cache_miss.result.elapsed_us
             cache_miss[k].append(v)
-        if m.HasField("locality"):
-            k = f"locality-{Storage.Name(m.locality.storage)}"
-            v = m.locality.result.elapsed_us
-            locality[k].append(v)
+        if m.HasField("locality1"):
+            k = f"locality1-{Storage.Name(m.locality1.storage)}"
+            v = m.locality1.result.elapsed_us
+            locality1[k].append(v)
+        if m.HasField("locality2"):
+            k = f"locality2-{Storage.Name(m.locality2.storage)}"
+            v = m.locality2.result.elapsed_us
+            locality2[k].append(v)
 
     pyplot.style.use('_mpl-gallery')
     plot(cache_miss)
-    plot(locality)
+    plot(locality1)
+    plot(locality2)
     pyplot.show()
 
 

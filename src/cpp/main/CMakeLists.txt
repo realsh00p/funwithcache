@@ -15,5 +15,6 @@ target_link_libraries(
     ${target}
     PRIVATE cache_miss
             locality_1
+            locality_2
             Boost::program_options
 )
