@@ -1,4 +1,4 @@
-set(target locality)
+set(target locality_1)
 
 file(GLOB_RECURSE srcs ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
 

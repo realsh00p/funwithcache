@@ -1,9 +1,9 @@
 #include "Args.hpp"
 
 namespace funwithprofiler {
-namespace locality {
+namespace locality_1 {
 
 auto run(const Storage &storage) -> Result;
 
-} // namespace locality
+} // namespace locality_1
 } // namespace funwithprofiler

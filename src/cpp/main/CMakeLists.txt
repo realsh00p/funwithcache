@@ -14,6 +14,6 @@ target_sources(
 target_link_libraries(
     ${target}
     PRIVATE cache_miss
-            locality
+            locality_1
             Boost::program_options
 )

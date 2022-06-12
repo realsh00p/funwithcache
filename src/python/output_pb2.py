@@ -13,25 +13,25 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0coutput.proto\x12\x0f\x66unwithprofiler\"A\n\x06Result\x12\x0b\n\x03sum\x18\x01 \x02(\x05\x12\x12\n\nelapsed_us\x18\x02 \x02(\x05\x12\x16\n\x0e\x65lapsed_cycles\x18\x03 \x02(\x05\"\x8e\x01\n\tCacheMiss\x12)\n\x07storage\x18\x01 \x02(\x0e\x32\x18.funwithprofiler.Storage\x12-\n\ttraversal\x18\x02 \x02(\x0e\x32\x1a.funwithprofiler.Traversal\x12\'\n\x06result\x18\x03 \x02(\x0b\x32\x17.funwithprofiler.Result\"^\n\x08Locality\x12)\n\x07storage\x18\x01 \x02(\x0e\x32\x18.funwithprofiler.Storage\x12\'\n\x06result\x18\x02 \x02(\x0b\x32\x17.funwithprofiler.Result\"o\n\x04Test\x12\x30\n\ncache_miss\x18\x01 \x01(\x0b\x32\x1a.funwithprofiler.CacheMissH\x00\x12-\n\x08locality\x18\x02 \x01(\x0b\x32\x19.funwithprofiler.LocalityH\x00\x42\x06\n\x04type\",\n\x05Tests\x12#\n\x04test\x18\x01 \x03(\x0b\x32\x15.funwithprofiler.Test**\n\x07Storage\x12\t\n\x05STACK\x10\x01\x12\n\n\x06STATIC\x10\x02\x12\x08\n\x04HEAP\x10\x03*/\n\tTraversal\x12\x11\n\rBREADTH_FIRST\x10\x01\x12\x0f\n\x0b\x44\x45PTH_FIRST\x10\x02')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0coutput.proto\x12\x0f\x66unwithprofiler\"A\n\x06Result\x12\x0b\n\x03sum\x18\x01 \x02(\x05\x12\x12\n\nelapsed_us\x18\x02 \x02(\x05\x12\x16\n\x0e\x65lapsed_cycles\x18\x03 \x02(\x05\"\x8e\x01\n\tCacheMiss\x12)\n\x07storage\x18\x01 \x02(\x0e\x32\x18.funwithprofiler.Storage\x12-\n\ttraversal\x18\x02 \x02(\x0e\x32\x1a.funwithprofiler.Traversal\x12\'\n\x06result\x18\x03 \x02(\x0b\x32\x17.funwithprofiler.Result\"_\n\tLocality1\x12)\n\x07storage\x18\x01 \x02(\x0e\x32\x18.funwithprofiler.Storage\x12\'\n\x06result\x18\x02 \x02(\x0b\x32\x17.funwithprofiler.Result\"q\n\x04Test\x12\x30\n\ncache_miss\x18\x01 \x01(\x0b\x32\x1a.funwithprofiler.CacheMissH\x00\x12/\n\tlocality1\x18\x02 \x01(\x0b\x32\x1a.funwithprofiler.Locality1H\x00\x42\x06\n\x04type\",\n\x05Tests\x12#\n\x04test\x18\x01 \x03(\x0b\x32\x15.funwithprofiler.Test**\n\x07Storage\x12\t\n\x05STACK\x10\x01\x12\n\n\x06STATIC\x10\x02\x12\x08\n\x04HEAP\x10\x03*/\n\tTraversal\x12\x11\n\rBREADTH_FIRST\x10\x01\x12\x0f\n\x0b\x44\x45PTH_FIRST\x10\x02')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'output_pb2', globals())
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  _STORAGE._serialized_start=500
-  _STORAGE._serialized_end=542
-  _TRAVERSAL._serialized_start=544
-  _TRAVERSAL._serialized_end=591
+  _STORAGE._serialized_start=503
+  _STORAGE._serialized_end=545
+  _TRAVERSAL._serialized_start=547
+  _TRAVERSAL._serialized_end=594
   _RESULT._serialized_start=33
   _RESULT._serialized_end=98
   _CACHEMISS._serialized_start=101
   _CACHEMISS._serialized_end=243
-  _LOCALITY._serialized_start=245
-  _LOCALITY._serialized_end=339
-  _TEST._serialized_start=341
-  _TEST._serialized_end=452
-  _TESTS._serialized_start=454
-  _TESTS._serialized_end=498
+  _LOCALITY1._serialized_start=245
+  _LOCALITY1._serialized_end=340
+  _TEST._serialized_start=342
+  _TEST._serialized_end=455
+  _TESTS._serialized_start=457
+  _TESTS._serialized_end=501
 # @@protoc_insertion_point(module_scope)

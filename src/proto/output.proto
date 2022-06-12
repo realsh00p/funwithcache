@@ -26,7 +26,7 @@ message CacheMiss {
   required Result result = 3;
 }
 
-message Locality {
+message Locality1 {
   required Storage storage = 1;
   required Result result = 2;
 }
@@ -34,7 +34,7 @@ message Locality {
 message Test {
   oneof type {
     CacheMiss cache_miss = 1;
-    Locality locality = 2;
+    Locality1 locality1 = 2;
   }
 }
 

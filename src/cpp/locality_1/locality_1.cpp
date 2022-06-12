@@ -1,4 +1,4 @@
-#include "locality.hpp"
+#include "locality_1.hpp"
 
 #include <iostream>
 #include <memory>
@@ -11,7 +11,7 @@
 #include "Warmup.hpp"
 
 namespace funwithprofiler {
-namespace locality {
+namespace locality_1 {
 
 using Matrix = matrix::Matrix<primitive::u64, 100, 1000>;
 
@@ -78,5 +78,5 @@ auto run(const Storage &storage) -> Result {
   return res;
 }
 
-} // namespace locality
+} // namespace locality_1
 } // namespace funwithprofiler
