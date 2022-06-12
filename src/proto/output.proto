@@ -6,6 +6,8 @@ enum Storage {
   STACK = 1;
   STATIC = 2;
   HEAP = 3;
+  HEAP_RANDOM = 4;
+  HEAP_CONTIGUOUS = 5;
 };
 
 enum Traversal {
@@ -31,10 +33,16 @@ message Locality1 {
   required Result result = 2;
 }
 
+message Locality2 {
+  required Storage storage = 1;
+  required Result result = 2;
+}
+
 message Test {
   oneof type {
     CacheMiss cache_miss = 1;
     Locality1 locality1 = 2;
+    Locality2 locality2 = 3;
   }
 }
 
